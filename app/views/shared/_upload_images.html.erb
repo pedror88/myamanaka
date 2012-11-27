@@ -1,0 +1,6 @@
+<div class="attachment attachment_magick_image <%= cycle('alpha', '', '', '', '', '', 'omega') %>" id="<%= attachment.id %>" data-id="<%= attachment.to_param %>">
+  <%= image_tag(attachment.thumb.url, :alt => "") %>
+
+  <input id="image_id" type="hidden" value="<%= attachment.id %>">
+  <%= link_to "[x]", "javascript://", :class => "remove btn btn-mini btn-danger" %>
+</div>

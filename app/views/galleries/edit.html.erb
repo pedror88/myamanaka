@@ -1,0 +1,6 @@
+<div class="publisher">
+  <h1><%= t("publisher.editing") %> <%= t("menu.project") %>: <%= @gallery.name %></h1>
+  <%= link_to "« #{t('publisher.list_all')}", galleries_path, :class=>"btn" %>
+
+  <%= render 'form', gallery: @gallery %>
+</div>

@@ -1,0 +1,34 @@
+<%= form_for(@gallery) do |f| %>
+  <%= render 'shared/form_messages', object: @gallery %>
+<div class="field-group">
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name%>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+<div class="field">
+    <%= f.label :date %><br />
+    <%=  f.date_select :date %>
+    </div>
+  </div>
+  <div class="field-group grid-large">
+    <h3>MULTIMÍDIA</h3><br />
+    <% if @gallery.new_record? %>
+      <p>É necessário salvar o item para fazer upload de imagens.</p>
+    <% else %>
+      <%= attachment_container @gallery, :images, partial: 'shared/upload_images' %>
+      <%= link_to "ordenar imagens »", "javascript://", class: "imagesToggleSortable btn btn-mini", data: { message: "« salvar ordenação" } %>
+    <% end %>
+  </div>
+  <div class="field-group">
+    <div class="field">
+  <%= render 'shared/status',    object: @gallery, f: f %>
+    </div>
+    <div class="field">
+  <%= render 'shared/form_save', object: @gallery, f: f %>
+    </div>
+</div>
+<% end %>

@@ -1,0 +1,19 @@
+body {
+	color: #000;
+	background-color: #FFF;
+	font-family: 'Raleway', sans-serif;
+	font-size:13px;
+	margin: 0 auto;
+}
+.container {
+	@include clearfix;
+	margin-left: 10px;
+}
+a {
+	color:#000;
+	text-decoration:none;
+	&:hover {
+		color:silver;
+	}
+}
+

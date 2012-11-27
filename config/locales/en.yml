@@ -1,0 +1,19 @@
+en:
+  views:
+    pagination:
+      previous: "&nbsp"
+      next: "&nbsp"
+    select: "select"
+
+  menu:
+    project:  'project'
+    projects: 'projects'
+
+  attributes:
+    name: 'name'
+
+  about:
+    history: 'history'
+    team:    'team'
+    awards:  'awards'
+    exhibitions: 'exhibitions'

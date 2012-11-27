@@ -1,0 +1,56 @@
+/* Elastislide Style */
+.es-carousel-wrapper{
+	background: #FFF;
+	padding:15px 27px;
+	border-bottom: 1px solid silver;
+}
+.es-carousel{
+	overflow:hidden;
+	background:#FFF;
+}
+.es-carousel ul{
+	display:none;
+}
+.es-carousel ul li{
+	float:left;
+	display:block;
+	height:100%;
+	width: 20px;
+}
+.es-carousel ul li a{
+	display:block;
+	opacity:0.8;
+	-webkit-touch-callout:none;
+	/* option */
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.es-carousel ul li.selected a{
+	border-color:#ddd;
+	opacity:1.0;
+}
+.es-carousel ul li a img{
+	display:block;
+	border:none;
+	max-height:100%;
+	max-width:100%;
+}
+.es-nav span{
+	position:absolute;
+	top:45%;
+	left:8px;	
+	width:14px;
+	height:26px;
+	cursor:pointer;
+	opacity:1.0;
+}
+.es-nav span.es-nav-next{
+	right:2px;
+	left:auto;
+}
+.es-nav span:hover{
+	opacity:1.0;
+}

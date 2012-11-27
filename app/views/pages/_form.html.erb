@@ -1,0 +1,17 @@
+<%= form_for(@page) do |f| %>
+  <%= render 'shared/form_messages', object: @page %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name%>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field-group">
+  <h2>controles</h2>
+  <%= render 'shared/status',    object: @page, f: f %>
+  <%= render 'shared/form_save', object: @page, f: f %>
+</div>
+<% end %>

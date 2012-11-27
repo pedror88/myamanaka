@@ -1,0 +1,39 @@
+
+<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+	<div class="rg-image-wrapper">
+		<div class="rg-image"></div>
+		<div class="rg-loading"></div>
+		<div class="rg-caption-wrapper">
+			<div class="rg-caption" style="display:none;">
+				<p></p>
+			</div>
+		</div>
+	</div>
+</script>
+<% content_for :menu_gallery do %>
+    <div id="rg-gallery" class="rg-gallery">
+        <ul class="album">
+            <li><strong><%= @gallery.name %></strong> / <%= @gallery.date %></li>
+            <li><p class="description"><%= @gallery.description %></p></li>
+        </ul>
+        <div class="rg-thumbs">
+            <!-- Elastislide Carousel Thumbnail Viewer -->
+            <div class="es-carousel-wrapper">
+                <div class="es-nav">	<span class="es-nav-prev"></span>
+    	<span class="es-nav-next"></span>
+
+                </div>
+                <div class="es-carousel">
+                    <ul>
+                        <% @gallery.images.each do |img| %>
+                            <li><a href="#">
+    							<%= image_tag img.thumb.url, "data-large" => img.img.url %>
+    						</a>
+                            </li>
+                            <% end %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>

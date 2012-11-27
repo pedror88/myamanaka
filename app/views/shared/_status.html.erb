@@ -1,0 +1,10 @@
+<div class="field-inline">
+  <h3>STATUS</h3><br />
+  <%= f.radio_button :published, false %><%= f.label :published, " #{t('publisher.draft')}", :value => false, :class => "no-block" %>
+  <br><%= f.radio_button :published, true %><%= f.label :published, " #{t('publisher.published')}", :value => true, :class => "no-block" %>
+</div>
+
+<div class="field full-date">
+  <%= f.label :published_at %>
+  <%= f.date_select :published_at %>
+</div>

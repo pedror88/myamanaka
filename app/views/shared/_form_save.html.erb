@@ -1,0 +1,7 @@
+<div class="field">
+  <%= f.submit t('publisher.save'), disable_with: t('publisher.saving'), :class=>"btn btn-primary" %>
+
+  <% unless object.new_record? %>
+    <%= link_to t('publisher.destroy'), object, method: :delete, data: { confirm: t('publisher.confirm') }, :class=>"btn btn-danger" %>
+  <% end %>
+</div>

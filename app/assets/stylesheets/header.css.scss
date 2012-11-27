@@ -1,0 +1,55 @@
+.header-wrapper {
+	@include clearfix;
+	position: relative;
+	float: left;
+	width: 245px;
+	margin-right: 10px;
+}
+.header-logo {
+	height: 80px;
+	padding-top: 5px;
+	border-bottom: 1px solid silver;
+}
+.header-menu {
+	display: block;
+	border-bottom: 1px solid silver;
+	height: 75px;
+	padding-top: 10px;
+	line-height: 20px;
+	cursor: pointer;
+	li {
+		display:block;
+	}
+}
+.header-logo h1{
+	font-size: 30px;
+	text-align: left;
+}
+.header-logo span{
+	font-size:13px;
+	display:block;
+	padding-top: 10px;
+}
+ul.header-menu.current {
+	@include clearfix;
+	min-height: 364px;
+	display:block;
+}
+ul.header-menu.current span {
+	display: inline-block;
+	-webkit-transform: rotate(90deg); 
+	-moz-transform: rotate(90deg);	
+	font-weight: bold;
+}
+li.item.current {
+	@include clearfix;
+	display: block;
+	width:245px;
+}
+li.subitem {
+	@include clearfix;
+	display: none;
+	width:245px;
+	line-height: 15px;
+}
+
